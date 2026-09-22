@@ -79,98 +79,98 @@ registerSlide({
     <div style="display:flex; flex-direction:column; height:100%;">
       <div class="anim-fade-up stagger-1" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-shrink:0;">
         <h2 class="slide-h2" style="font-size:22px; margin-bottom:0;">Talaan ng Nilalaman at Daloy ng Aralin (4A's)</h2>
-        <span class="cue-badge gold" style="margin-bottom:0; font-size:11px; padding:3px 10px;">Pindutin ang bahaging nais talakayin</span>
+        <span class="cue-badge gold" style="margin-bottom:0; font-size:12.5px; padding:3px 10px;">Pindutin ang bahaging nais talakayin</span>
       </div>
 
       <div class="anim-fade-up stagger-2" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; flex:1; min-height:0;">
         <button class="meta-card yellow" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('prayer')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PANIMULA</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PANIMULA</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#991B1B; margin-bottom:2px;">📜 1. Panalangin at Pagbati</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Panalangin, masiglang pagbati, at pagtala ng liban.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#991B1B; margin-bottom:2px;">📜 1. Panalangin at Pagbati</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Panalangin, masiglang pagbati, at pagtala ng liban.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#B45309;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#B45309;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card green" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('rules')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#14532D; color:#BBF7D0; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PANIMULA</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#14532D; color:#BBF7D0; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PANIMULA</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#166534; margin-bottom:2px;">📋 2. Alituntunin sa Silid</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Mga alituntunin sa loob ng silid-aralan.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#166534; margin-bottom:2px;">📋 2. Alituntunin sa Silid</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Mga alituntunin sa loob ng silid-aralan.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#15803D;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#15803D;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card white" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('review')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#0F172A; color:#94A3B8; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">BALIK-ARAL</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#0F172A; color:#94A3B8; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">BALIK-ARAL</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#0F172A; margin-bottom:2px;">⚖️ 3. Demand at Supply</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Interaksyon ng mamimili at nagtitinda sa presyo.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#0F172A; margin-bottom:2px;">⚖️ 3. Demand at Supply</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Interaksyon ng mamimili at nagtitinda sa presyo.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#C5221F;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#C5221F;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card pink" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('motivation-intro')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#881337; color:#FECDD3; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: GAWAIN</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#881337; color:#FECDD3; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: GAWAIN</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#9F1239; margin-bottom:2px;">🧺 4. "Saan Sila Nabibilang?"</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">2 Kolum: Dami ng Nagtitinda at Katunggali.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#9F1239; margin-bottom:2px;">🧺 4. "Saan Sila Nabibilang?"</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">2 Kolum: Dami ng Nagtitinda at Katunggali.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#BE123C;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#BE123C;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card blue" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('analysis-0')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#0C4A6E; color:#BAE6FD; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: PAGSUSURI</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#0C4A6E; color:#BAE6FD; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: PAGSUSURI</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#0369A1; margin-bottom:2px;">💻 5. Pagsusuri (4 na Tanong)</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Pangkatang pagsusuri gamit ang laptop at 'Bakit?'.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#0369A1; margin-bottom:2px;">💻 5. Pagsusuri (4 na Tanong)</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Pangkatang pagsusuri gamit ang laptop at 'Bakit?'.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#0284C7;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#0284C7;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card yellow" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('diff-pangkat1')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">DIFFERENTIATED</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">DIFFERENTIATED</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#991B1B; margin-bottom:2px;">👥 6. Differentiated Tasks</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Gawain ng Pangkat 1, 2, at 3 bago magtalakay.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#991B1B; margin-bottom:2px;">👥 6. Differentiated Tasks</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Gawain ng Pangkat 1, 2, at 3 bago magtalakay.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#B45309;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#B45309;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card green" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('abs-perfect')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#14532D; color:#BBF7D0; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: TALAKAYAN</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#14532D; color:#BBF7D0; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: TALAKAYAN</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#166534; margin-bottom:2px;">🏛️ 7. Estraktura ng Pamilihan</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Ganap at Hindi Ganap na Kompetisyon (Video Clip).</p>
+            <h4 style="font-size:16px; font-weight:900; color:#166534; margin-bottom:2px;">🏛️ 7. Estraktura ng Pamilihan</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Ganap at Hindi Ganap na Kompetisyon (Video Clip).</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#15803D;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#15803D;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card pink" style="cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 10px;" onclick="App.jumpToId('application')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#881337; color:#FECDD3; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: PAGLALAPAT</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#881337; color:#FECDD3; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">4A'S: PAGLALAPAT</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#9F1239; margin-bottom:2px;">🎭 8. Dula-Dulaan at Rubrik</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">4 na Sobre at Pagbuo ng Sariling Rubrik.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#9F1239; margin-bottom:2px;">🎭 8. Dula-Dulaan at Rubrik</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">4 na Sobre at Pagbuo ng Sariling Rubrik.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#BE123C;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#BE123C;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card blue" style="grid-column: span 2; cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 12px;" onclick="App.jumpToId('quiz')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#0C4A6E; color:#BAE6FD; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PAGTATAYA</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#0C4A6E; color:#BAE6FD; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">PAGTATAYA</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#0369A1; margin-bottom:2px;">🏆 9. Pagtataya (Pagsusulit na may 5 Aytem)</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Pagtataya at pagsusulit na may awtomatikong pagmamarka.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#0369A1; margin-bottom:2px;">🏆 9. Pagtataya (Pagsusulit na may 5 Aytem)</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Pagtataya at pagsusulit na may awtomatikong pagmamarka.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#0284C7;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#0284C7;">Pumunta ➔</span>
         </button>
 
         <button class="meta-card yellow" style="grid-column: span 2; cursor:pointer; text-align:left; display:flex; flex-direction:column; justify-content:space-between; padding:8px 12px;" onclick="App.jumpToId('assignment')">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 6px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">KASUNDUAN</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:900; background:#78350F; color:#FEF08A; padding:2px 8px; border-radius:5px; width:fit-content; letter-spacing:0.06em;">KASUNDUAN</span>
           <div>
-            <h4 style="font-size:15px; font-weight:900; color:#B45309; margin-bottom:2px;">📝 10. Takdang-Aralin at Pagtatapos</h4>
-            <p style="font-size:11.5px; font-weight:700; color:#475569; line-height:1.3;">Replektibong sanaysay sa kuwaderno at pagtatapos.</p>
+            <h4 style="font-size:16px; font-weight:900; color:#B45309; margin-bottom:2px;">📝 10. Takdang-Aralin at Pagtatapos</h4>
+            <p style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.3;">Replektibong sanaysay sa kuwaderno at pagtatapos.</p>
           </div>
-          <span style="font-size:11px; font-weight:900; color:#B45309;">Pumunta ➔</span>
+          <span style="font-size:12.5px; font-weight:900; color:#B45309;">Pumunta ➔</span>
         </button>
       </div>
     </div>`
@@ -185,7 +185,7 @@ registerSlide({
     <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
       <div class="anim-fade-up stagger-1" style="display:flex; justify-content:space-between; align-items:center; width:100%; max-width:860px; margin-bottom:10px;">
         <span class="cue-badge gold" style="font-size:14px; padding:5px 14px; margin:0;">⏱ Panimula · 1. Panalangin</span>
-        <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:800; color:#FEF08A; background:rgba(0,0,0,0.4); padding:4px 12px; border-radius:6px; border:1px solid rgba(254,240,138,0.3);">
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:800; color:#FEF08A; background:rgba(0,0,0,0.4); padding:4px 12px; border-radius:6px; border:1px solid rgba(254,240,138,0.3);">
           🙏 Pambungad na Panalangin
         </span>
       </div>
@@ -265,7 +265,7 @@ registerSlide({
                 <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:900; color:${p.col}; margin-bottom:2px;">
                   ${p.name}
                 </h3>
-                <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase; letter-spacing:0.06em;">Kalagayan ng Pangkat:</div>
+                <div style="font-size:13px; font-weight:800; color:#475569; text-transform:uppercase; letter-spacing:0.06em;">Kalagayan ng Pangkat:</div>
               </div>
 
               <div class="att-status-pill ${pillClass}" id="attStatus-${p.num}">
@@ -289,14 +289,14 @@ registerSlide({
       </div>
 
       <div class="anim-fade-up stagger-3" style="display:flex; justify-content:space-between; align-items:center; background:rgba(6,24,54,0.85); border:1.5px solid #1E4976; border-radius:12px; padding:8px 18px;">
-        <div id="attSummaryText" style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:900; color:#F8FAFC; display:flex; align-items:center; gap:8px;">
+        <div id="attSummaryText" style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#F8FAFC; display:flex; align-items:center; gap:8px;">
           ${App.getAttendanceSummaryHTML()}
         </div>
         <div style="display:flex; gap:10px;">
-          <button class="btn primary" style="font-size:12px; padding:6px 16px;" onclick="App.confirmAttendance()">
+          <button class="btn primary" style="font-size:13.5px; padding:6px 16px;" onclick="App.confirmAttendance()">
             💾 Kumpirmahin ang Talaan (+50 XP)
           </button>
-          <button class="btn" style="font-size:12px; padding:6px 14px; background:#1E293B; border-color:#475569;" onclick="App.resetAttendance()">
+          <button class="btn" style="font-size:13.5px; padding:6px 14px; background:#1E293B; border-color:#475569;" onclick="App.resetAttendance()">
             🔄 Ibalik sa Simula
           </button>
         </div>
@@ -384,7 +384,7 @@ registerSlide({
       <div class="anim-fade-up stagger-2" style="display:flex; flex-direction:column; gap:12px;">
         ${lessonData.objectives.map(obj => `
           <div class="meta-card ${obj.color}" style="padding:14px 20px;">
-            <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:800; color:var(--market-red); text-transform:uppercase; margin-bottom:3px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:800; color:var(--market-red); text-transform:uppercase; margin-bottom:3px;">
               ${obj.type}
             </div>
             <div style="font-size:18.5px; font-weight:700; line-height:1.45;">
@@ -459,13 +459,13 @@ registerSlide({
           <span class="cue-badge gold" style="margin-bottom:0;">⏱ Pangkatang Gawain sa Pag-uuri</span>
           <span style="font-size:16.5px; font-weight:800;">I-pangkat ang mga produkto sa 2 kategorya ng talaan:</span>
         </div>
-        <button class="btn" style="font-size:13px; padding:6px 16px;" onclick="DnDController.resetGame()">🔄 Ibalik sa Simula</button>
+        <button class="btn" style="font-size:14.5px; padding:6px 16px;" onclick="DnDController.resetGame()">🔄 Ibalik sa Simula</button>
       </div>
 
       <div class="drag-layout anim-fade-up stagger-2">
         <!-- Draggable Chips Pool -->
         <div class="drag-pool-container">
-          <div style="display:flex; justify-content:space-between; font-size:13.5px; font-weight:800; color:#93C5FD;">
+          <div style="display:flex; justify-content:space-between; font-size:14.5px; font-weight:800; color:#93C5FD;">
             <span>MGA PRODUKTO AT KUMPANYA (13 AYTEM):</span>
             <span class="peso-tag" id="sortRemainingBadge" style="background:var(--slate-board);">Natitira: 13 / 13</span>
           </div>
@@ -519,7 +519,7 @@ lessonData.analysisQuestions.forEach((item, index) => {
         </div>
 
         <div class="meta-card yellow anim-fade-up stagger-3" style="margin-bottom:8px; padding:14px 20px;">
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:900; color:var(--market-red); text-transform:uppercase; letter-spacing:0.05em;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:var(--market-red); text-transform:uppercase; letter-spacing:0.05em;">
             Gabay na Katanungan #${index + 1}
           </div>
           <h2 class="slide-h2" style="font-size:22px; font-weight:900; color:var(--slate-board); margin:4px 0 0; line-height:1.35;">
@@ -558,14 +558,14 @@ registerSlide({
           <h2 class="slide-h2" style="font-size:22px; margin-top:2px;">${lessonData.diffPangkat1.title}</h2>
         </div>
         <div style="display:flex; gap:10px;">
-          <button class="btn" style="font-size:12px; padding:6px 14px;" onclick="App.resetDiffP1()">🔄 Ibalik sa Simula</button>
-          <button class="btn gold" style="font-size:12px; padding:6px 14px;" onclick="App.jumpToId('diff-pangkat2')">Gawain ng Pangkat 2 ➔</button>
+          <button class="btn" style="font-size:13.5px; padding:6px 14px;" onclick="App.resetDiffP1()">🔄 Ibalik sa Simula</button>
+          <button class="btn gold" style="font-size:13.5px; padding:6px 14px;" onclick="App.jumpToId('diff-pangkat2')">Gawain ng Pangkat 2 ➔</button>
         </div>
       </div>
 
-      <div class="meta-card yellow anim-fade-up stagger-2" style="padding:8px 14px; font-size:14px; font-weight:700;">
+      <div class="meta-card yellow anim-fade-up stagger-2" style="padding:8px 14px; font-size:15px; font-weight:700;">
         <b>Panuto para sa Pangkat 1:</b> Piliin ang kard ng larawan, at i-click ang kolum ng estraktura kung saan ito nabibilang (Partikular sa estrukturang <i>"iisa lang ang nagtitinda"</i>):
-        <span class="peso-tag" id="p1RemainingCount" style="margin-left:8px; font-size:11px;">Natitira: 5 / 5</span>
+        <span class="peso-tag" id="p1RemainingCount" style="margin-left:8px; font-size:13px;">Natitira: 5 / 5</span>
       </div>
 
       <!-- Draggable/Clickable Picture Cards Pool -->
@@ -578,7 +578,7 @@ registerSlide({
       </div>
 
       <!-- Completion Banner -->
-      <div id="p1DoneBanner" style="display:none; background:#DCFCE7; border:2px solid #16A34A; color:#14532D; padding:6px 12px; border-radius:8px; text-align:center; font-weight:800; font-size:13.5px;">
+      <div id="p1DoneBanner" style="display:none; background:#DCFCE7; border:2px solid #16A34A; color:#14532D; padding:6px 12px; border-radius:8px; text-align:center; font-weight:800; font-size:15px;">
         🎉 Mahusay Pangkat 1! Matagumpay ninyong napangkat ang lahat ng 5 larawan sa tamang estraktura! (+50 XP)
       </div>
 
@@ -607,14 +607,14 @@ registerSlide({
           <h2 class="slide-h2" style="font-size:22px; margin-top:2px;">${lessonData.diffPangkat2.title}</h2>
         </div>
         <div style="display:flex; gap:10px;">
-          <button class="btn" style="font-size:12px; padding:6px 14px;" onclick="App.resetDiffP2()">🔄 Ibalik sa Simula</button>
-          <button class="btn gold" style="font-size:12px; padding:6px 14px;" onclick="App.jumpToId('diff-pangkat3')">Gawain ng Pangkat 3 ➔</button>
+          <button class="btn" style="font-size:13.5px; padding:6px 14px;" onclick="App.resetDiffP2()">🔄 Ibalik sa Simula</button>
+          <button class="btn gold" style="font-size:13.5px; padding:6px 14px;" onclick="App.jumpToId('diff-pangkat3')">Gawain ng Pangkat 3 ➔</button>
         </div>
       </div>
 
-      <div class="meta-card green anim-fade-up stagger-2" style="padding:8px 14px; font-size:14px; font-weight:700;">
+      <div class="meta-card green anim-fade-up stagger-2" style="padding:8px 14px; font-size:15px; font-weight:700;">
         <b>Panuto para sa Pangkat 2:</b> Piliin ang pahayag ng katangian, at i-click ang tamang kolum ng estraktura:
-        <span class="peso-tag" id="p2RemainingCount" style="margin-left:8px; font-size:11px;">Natitira: 4 / 4</span>
+        <span class="peso-tag" id="p2RemainingCount" style="margin-left:8px; font-size:13px;">Natitira: 4 / 4</span>
       </div>
 
       <!-- Statement Chips Pool -->
@@ -627,7 +627,7 @@ registerSlide({
       </div>
 
       <!-- Completion Banner -->
-      <div id="p2DoneBanner" style="display:none; background:#DCFCE7; border:2px solid #16A34A; color:#14532D; padding:6px 12px; border-radius:8px; text-align:center; font-weight:800; font-size:13.5px;">
+      <div id="p2DoneBanner" style="display:none; background:#DCFCE7; border:2px solid #16A34A; color:#14532D; padding:6px 12px; border-radius:8px; text-align:center; font-weight:800; font-size:15px;">
         🎉 Magaling Pangkat 2! Matagumpay ninyong naihanay ang 4 na katangian sa kani-kanilang estraktura! (+50 XP)
       </div>
 
@@ -656,8 +656,8 @@ registerSlide({
           <h2 class="slide-h2" style="font-size:22px; margin-top:2px;">${lessonData.diffPangkat3.title}</h2>
         </div>
         <div style="display:flex; gap:10px;">
-          <button class="btn" style="font-size:12px; padding:6px 14px;" onclick="App.resetDiffP3()">🔄 Isara ang Sagot</button>
-          <button class="btn gold" style="font-size:12px; padding:6px 14px;" onclick="App.jumpToId('abs-video')">Pormal na Talakayan (Video Clip) ➔</button>
+          <button class="btn" style="font-size:13.5px; padding:6px 14px;" onclick="App.resetDiffP3()">🔄 Isara ang Sagot</button>
+          <button class="btn gold" style="font-size:13.5px; padding:6px 14px;" onclick="App.jumpToId('abs-video')">Pormal na Talakayan (Video Clip) ➔</button>
         </div>
       </div>
 
@@ -669,23 +669,23 @@ registerSlide({
           <div style="font-family:'Bungee',sans-serif; font-size:15px; color:#92400E;">
             📌 MANILA PAPER OUTPUT: SITWASYON NG PETRON, SHELL, AT CALTEX
           </div>
-          <span class="peso-tag" style="background:#B45309; font-size:12px;">Pindutin ang sagot upang maipakita</span>
+          <span class="peso-tag" style="background:#B45309; font-size:13.5px;">Pindutin ang sagot upang maipakita</span>
         </div>
 
         <!-- 2-Column Table: Mga Tanong | Mga Sagot -->
         <div class="manila-table-grid" style="flex:1; min-height:0;">
           <!-- Left: Mga Tanong -->
           <div style="display:flex; flex-direction:column; gap:8px;">
-            <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:900; color:#78350F; border-bottom:2px solid #D97706; padding-bottom:4px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#78350F; border-bottom:2px solid #D97706; padding-bottom:4px;">
               📋 MGA TANONG:
             </div>
             ${lessonData.diffPangkat3.qaList.map((item, idx) => `
               <div class="manila-qa-box" id="p3qbox-${idx}">
-                <div style="font-size:13.5px; font-weight:900; color:#0F172A; line-height:1.35;">
+                <div style="font-size:15px; font-weight:900; color:#0F172A; line-height:1.35;">
                   ${item.q}
                 </div>
                 <div style="margin-top:6px;">
-                  <button class="btn gold" id="p3btn-${idx}" style="font-size:11px; padding:4px 10px;" onclick="App.revealDiffP3(${idx})">
+                  <button class="btn gold" id="p3btn-${idx}" style="font-size:13px; padding:4px 10px;" onclick="App.revealDiffP3(${idx})">
                     🔍 Ipakita ang Sagot
                   </button>
                 </div>
@@ -695,15 +695,15 @@ registerSlide({
 
           <!-- Right: Mga Sagot at Konsepto -->
           <div style="display:flex; flex-direction:column; gap:8px;">
-            <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:900; color:#14532D; border-bottom:2px solid #16A34A; padding-bottom:4px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#14532D; border-bottom:2px solid #16A34A; padding-bottom:4px;">
               💡 MGA SAGOT AT MAHAHALAGANG KONSEPTO:
             </div>
             ${lessonData.diffPangkat3.qaList.map((item, idx) => `
               <div id="p3ans-${idx}" style="display:none; background:#FFFFFF; border:2px solid #16A34A; border-radius:10px; padding:10px 14px; box-shadow:0 3px 8px rgba(0,0,0,0.1); margin-bottom:8px;">
-                <div style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:900; color:#15803D; text-transform:uppercase; letter-spacing:0.04em;">
+                <div style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:900; color:#15803D; text-transform:uppercase; letter-spacing:0.04em;">
                   ✓ Konsepto: ${item.keyConcept}
                 </div>
-                <p style="font-size:13px; font-weight:800; color:#0F172A; line-height:1.4; margin:4px 0 0;">
+                <p style="font-size:15px; font-weight:800; color:#0F172A; line-height:1.4; margin:4px 0 0;">
                   ${item.a}
                 </p>
               </div>
@@ -735,7 +735,7 @@ registerSlide({
         <h1 class="slide-h1" style="font-size:26px; margin-bottom:2px; color:var(--slate-board);">
           Pormal na Talakayan sa Pamamagitan ng Video Clip Presentation
         </h1>
-        <p style="font-size:13px; font-weight:700; color:#475569; margin:0;">
+        <p style="font-size:15px; font-weight:700; color:#1E293B; margin:0;">
           Gamit ang mga kasagutan ng bawat pangkat sa mga naunang gawain, pormal na talakayin ang iba't ibang estraktura ng pamilihan sa pamamagitan ng video clip presentation.
         </p>
       </div>
@@ -759,10 +759,10 @@ registerSlide({
         <!-- Right: Gabay at Pamprosesong Puntos -->
         <div style="display:flex; flex-direction:column; justify-content:space-between; gap:8px;">
           <div class="meta-card yellow" style="padding:12px 14px; flex:1;">
-            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:15px; color:var(--market-red); margin-bottom:4px;">
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--market-red); margin-bottom:4px;">
               🎯 Mga Gabay sa Video Clip Presentation:
             </h3>
-            <ul style="font-size:13px; font-weight:700; line-height:1.4; color:#0F172A; padding-left:16px; margin:0;">
+            <ul style="font-size:15px; font-weight:700; line-height:1.45; color:#0F172A; padding-left:16px; margin:0;">
               <li style="margin-bottom:4px;">Ano ang pagkakaiba ng <b>Ganap</b> at <b>Hindi Ganap na Kompetisyon</b>?</li>
               <li style="margin-bottom:4px;">Bakit tinatawag na <b>Price Taker</b> ang nagtitinda sa ganap na kompetisyon?</li>
               <li>Paano nagiging <b>Price Maker</b> ang mga negosyo sa Monopolyo at Oligopolyo?</li>
@@ -770,12 +770,12 @@ registerSlide({
           </div>
 
           <div class="meta-card green" style="padding:10px 14px;">
-            <p style="font-size:12.5px; font-weight:800; color:#14532D; margin:0;">
+            <p style="font-size:14.5px; font-weight:800; color:#14532D; margin:0;">
               💡 <b>Pansinin sa Video Clip:</b> Pagsusuri sa bigas, kuryente, tubig, at petrolyo ayon sa kanilang estraktura!
             </p>
           </div>
 
-          <button class="btn-arcade-gold" style="padding:8px 16px; font-size:13px; width:100%; justify-content:center;" onclick="App.jumpToId('abs-perfect')">
+          <button class="btn-arcade-gold" style="padding:8px 16px; font-size:15px; width:100%; justify-content:center;" onclick="App.jumpToId('abs-perfect')">
             <span>Tumuloy sa Iba't Ibang Estraktura ng Pamilihan ➔</span>
           </button>
         </div>
@@ -865,7 +865,7 @@ registerSlide({
                 <h4 style="font-size:21px; font-weight:900; color:var(--market-red);">a. Monopolyo</h4>
                 <p style="font-size:16.5px; font-weight:800; color:#1E293B; line-height:1.4; margin-top:8px;">Iisa ang tagaprodyus; walang direktang kapalit.</p>
               </div>
-              <div class="peso-tag" style="font-size:12.5px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
+              <div class="peso-tag" style="font-size:14px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
             </div>
             <div class="flip-card-back meta-card white" style="display:flex; flex-direction:column; justify-content:space-between; padding:16px 14px; border:2.5px solid var(--market-red);">
               <div>
@@ -877,7 +877,7 @@ registerSlide({
                   Halimbawa: Meralco (kuryente), Maynilad (tubig).
                 </div>
               </div>
-              <span style="font-size:12.5px; font-weight:900; color:#475569; text-align:center;">Pindutin muli upang ibalik</span>
+              <span style="font-size:13.5px; font-weight:900; color:#1E293B; text-align:center;">Pindutin muli upang ibalik</span>
             </div>
           </div>
         </div>
@@ -891,7 +891,7 @@ registerSlide({
                 <h4 style="font-size:21px; font-weight:900; color:#0369A1;">b. Monopsonyo</h4>
                 <p style="font-size:16.5px; font-weight:800; color:#1E293B; line-height:1.4; margin-top:8px;">Iisa ang mamimili ngunit maraming tagaprodyus.</p>
               </div>
-              <div class="peso-tag" style="background:#0284C7; font-size:12.5px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
+              <div class="peso-tag" style="background:#0284C7; font-size:14px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
             </div>
             <div class="flip-card-back meta-card white" style="display:flex; flex-direction:column; justify-content:space-between; padding:16px 14px; border:2.5px solid #0369A1;">
               <div>
@@ -903,7 +903,7 @@ registerSlide({
                   Halimbawa: Pamahalaan (iisang bumibili ng serbisyo ng pulis at sundalo).
                 </div>
               </div>
-              <span style="font-size:12.5px; font-weight:900; color:#475569; text-align:center;">Pindutin muli upang ibalik</span>
+              <span style="font-size:13.5px; font-weight:900; color:#1E293B; text-align:center;">Pindutin muli upang ibalik</span>
             </div>
           </div>
         </div>
@@ -917,7 +917,7 @@ registerSlide({
                 <h4 style="font-size:21px; font-weight:900; color:var(--market-green);">c. Oligopolyo</h4>
                 <p style="font-size:16.5px; font-weight:800; color:#1E293B; line-height:1.4; margin-top:8px;">Kakaunti ang nagtitinda; magkakaugnay ang presyo.</p>
               </div>
-              <div class="peso-tag" style="background:var(--market-green); font-size:12.5px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
+              <div class="peso-tag" style="background:var(--market-green); font-size:14px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
             </div>
             <div class="flip-card-back meta-card white" style="display:flex; flex-direction:column; justify-content:space-between; padding:16px 14px; border:2.5px solid var(--market-green);">
               <div>
@@ -929,7 +929,7 @@ registerSlide({
                   Halimbawa: Petron, Shell, Caltex; Globe, Smart, DITO.
                 </div>
               </div>
-              <span style="font-size:12.5px; font-weight:900; color:#475569; text-align:center;">Pindutin muli upang ibalik</span>
+              <span style="font-size:13.5px; font-weight:900; color:#1E293B; text-align:center;">Pindutin muli upang ibalik</span>
             </div>
           </div>
         </div>
@@ -943,7 +943,7 @@ registerSlide({
                 <h4 style="font-size:21px; font-weight:900; color:var(--market-red);">d. Monopolistic</h4>
                 <p style="font-size:16.5px; font-weight:800; color:#1E293B; line-height:1.4; margin-top:8px;">Maraming nagtitinda ngunit differentiated ang produkto.</p>
               </div>
-              <div class="peso-tag" style="background:var(--market-red); font-size:12.5px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
+              <div class="peso-tag" style="background:var(--market-red); font-size:14px; font-weight:900; padding:4px 10px; align-self:center;">Pindutin para Baliktarin ⟳</div>
             </div>
             <div class="flip-card-back meta-card white" style="display:flex; flex-direction:column; justify-content:space-between; padding:16px 14px; border:2.5px solid var(--market-red);">
               <div>
@@ -955,7 +955,7 @@ registerSlide({
                   Halimbawa: Jollibee, McDonald's; Tide, Surf, Safeguard.
                 </div>
               </div>
-              <span style="font-size:12.5px; font-weight:900; color:#475569; text-align:center;">Pindutin muli upang ibalik</span>
+              <span style="font-size:13.5px; font-weight:900; color:#1E293B; text-align:center;">Pindutin muli upang ibalik</span>
             </div>
           </div>
         </div>
@@ -976,8 +976,8 @@ registerSlide({
           <h2 class="slide-h2" style="font-size:25px; margin-top:2px;">Pangkatang Dula-Dulaan: "Suriin at Isadula!"</h2>
         </div>
         <div style="display:flex; gap:10px;">
-          <button class="btn" style="font-size:12px; padding:6px 14px;" onclick="App.resetEnvelopes()">🔄 Isara ang mga Sobre</button>
-          <button class="btn gold" style="font-size:12px; padding:6px 14px;" onclick="App.jumpToId('rubric')">Bumuo ng Rubrik ➔</button>
+          <button class="btn" style="font-size:13.5px; padding:6px 14px;" onclick="App.resetEnvelopes()">🔄 Isara ang mga Sobre</button>
+          <button class="btn gold" style="font-size:13.5px; padding:6px 14px;" onclick="App.jumpToId('rubric')">Bumuo ng Rubrik ➔</button>
         </div>
       </div>
 
@@ -992,22 +992,22 @@ registerSlide({
             <div>
               <div style="font-size:38px;">${grp.icon}</div>
               <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; color:var(--market-red); margin:4px 0;">${grp.label}</h3>
-              <div class="peso-tag" style="background:var(--slate-board); font-size:11px;">${grp.structure.split('(')[0]}</div>
+              <div class="peso-tag" style="background:var(--slate-board); font-size:13px;">${grp.structure.split('(')[0]}</div>
             </div>
 
             <div id="envStatus-${idx}" style="margin:16px 0;">
               <div style="font-size:42px;">✉️</div>
-              <div style="font-size:13px; font-weight:800; color:var(--market-gold); margin-top:4px;">Pindutin upang Buksan</div>
+              <div style="font-size:14.5px; font-weight:800; color:var(--market-gold); margin-top:4px;">Pindutin upang Buksan</div>
             </div>
 
             <div id="envScenario-${idx}" style="display:none; text-align:left; background:#FFFFFF; padding:12px 14px; border-radius:10px; border:2px solid #D97706; font-size:14px; font-weight:800; line-height:1.45; color:#0F172A; box-shadow:0 3px 10px rgba(0,0,0,0.1);">
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:900; color:#B45309; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:900; color:#B45309; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">
                 📜 Sitwasyon ng Dula-Dulaan:
               </div>
               ${grp.scenario}
             </div>
 
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#334155; margin-top:6px;">⏱ Oras: 1–2 Minuto</span>
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:900; color:#334155; margin-top:6px;">⏱ Oras: 1–2 Minuto</span>
           </div>
         `).join('')}
       </div>
@@ -1026,7 +1026,7 @@ registerSlide({
           <span class="cue-badge gold" style="margin-bottom:0;">Pagmamarka ng Dula-Dulaan</span>
           <h2 class="slide-h2" style="font-size:24px; margin-top:2px;">Pagbuo ng Sariling Pamantayan sa Pagmamarka (Rubrik)</h2>
         </div>
-        <button class="btn primary" style="font-size:13px; padding:6px 18px;" onclick="App.jumpToId('quiz')">
+        <button class="btn primary" style="font-size:14.5px; padding:6px 18px;" onclick="App.jumpToId('quiz')">
           Tumuloy sa Pagtataya ➔
         </button>
       </div>
@@ -1036,7 +1036,7 @@ registerSlide({
         <div style="font-family:'Bungee',sans-serif; font-size:15px; color:#B45309; margin-bottom:4px;">
           📢 ${lessonData.rubricGuide.instruction}
         </div>
-        <p style="font-size:14px; font-weight:700; color:#0F172A; margin:0;">
+        <p style="font-size:15px; font-weight:700; color:#0F172A; margin:0;">
           Ang bawat pangkat ay magkakasundo sa sariling pamantayan at hatol ng puntos para sa dula-dulaan.
         </p>
       </div>
@@ -1046,14 +1046,14 @@ registerSlide({
         <!-- Two Guiding Questions -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
           <div style="background:rgba(251, 191, 36, 0.12); border:1.5px solid #F59E0B; border-radius:8px; padding:8px 12px;">
-            <div style="font-size:12px; font-weight:900; color:#FDE047; text-transform:uppercase;">❓ Gabay na Tanong 1:</div>
-            <div style="font-size:14px; font-weight:800; color:#FFFFFF; margin-top:2px;">
+            <div style="font-size:13.5px; font-weight:900; color:#FDE047; text-transform:uppercase;">❓ Gabay na Tanong 1:</div>
+            <div style="font-size:15px; font-weight:800; color:#FFFFFF; margin-top:2px;">
               "${lessonData.rubricGuide.guideQuestions[0]}"
             </div>
           </div>
           <div style="background:rgba(56, 189, 248, 0.12); border:1.5px solid #38BDF8; border-radius:8px; padding:8px 12px;">
-            <div style="font-size:12px; font-weight:900; color:#7DD3FC; text-transform:uppercase;">❓ Gabay na Tanong 2:</div>
-            <div style="font-size:14px; font-weight:800; color:#FFFFFF; margin-top:2px;">
+            <div style="font-size:13.5px; font-weight:900; color:#7DD3FC; text-transform:uppercase;">❓ Gabay na Tanong 2:</div>
+            <div style="font-size:15px; font-weight:800; color:#FFFFFF; margin-top:2px;">
               "${lessonData.rubricGuide.guideQuestions[1]}"
             </div>
           </div>
@@ -1061,56 +1061,56 @@ registerSlide({
 
         <!-- Student Dynamic Criteria Rows -->
         <div style="flex:1; overflow-y:auto;">
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:900; color:#94A3B8; text-transform:uppercase; margin-bottom:6px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:900; color:#94A3B8; text-transform:uppercase; margin-bottom:6px;">
             Mungkahi / Burador ng Pamantayan ng Pangkat:
           </div>
 
           <div class="rubric-criteria-row">
             <div>
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:900; color:#F8FAFC;">1. Nilalaman at Kawastuhan ng Estraktura</div>
-              <div style="font-size:12px; font-weight:700; color:#94A3B8;">Naipakita ba nang wasto ang mga katangian ng nabunot na estraktura?</div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#F8FAFC;">1. Nilalaman at Kawastuhan ng Estraktura</div>
+              <div style="font-size:13.5px; font-weight:700; color:#94A3B8;">Naipakita ba nang wasto ang mga katangian ng nabunot na estraktura?</div>
             </div>
             <div style="text-align:center;">
-              <span class="peso-tag" id="rubricPts-nilalaman" style="background:#D97706; font-size:13px;">${App.studentRubricPoints.nilalaman} pts</span>
+              <span class="peso-tag" id="rubricPts-nilalaman" style="background:#D97706; font-size:14.5px;">${App.studentRubricPoints.nilalaman} pts</span>
             </div>
             <div style="display:flex; justify-content:center; gap:6px;">
-              <button class="btn" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('nilalaman', -1)">-</button>
-              <button class="btn gold" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('nilalaman', 1)">+</button>
+              <button class="btn" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('nilalaman', -1)">-</button>
+              <button class="btn gold" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('nilalaman', 1)">+</button>
             </div>
           </div>
 
           <div class="rubric-criteria-row">
             <div>
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:900; color:#F8FAFC;">2. Pagiging Malikhain at Husay sa Pag-arte</div>
-              <div style="font-size:12px; font-weight:700; color:#94A3B8;">Makatotohanan ba at nakapupukaw ng interes ang pagsasatao sa sitwasyon?</div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#F8FAFC;">2. Pagiging Malikhain at Husay sa Pag-arte</div>
+              <div style="font-size:13.5px; font-weight:700; color:#94A3B8;">Makatotohanan ba at nakapupukaw ng interes ang pagsasatao sa sitwasyon?</div>
             </div>
             <div style="text-align:center;">
-              <span class="peso-tag" id="rubricPts-pagarte" style="background:#0284C7; font-size:13px;">${App.studentRubricPoints.pagarte} pts</span>
+              <span class="peso-tag" id="rubricPts-pagarte" style="background:#0284C7; font-size:14.5px;">${App.studentRubricPoints.pagarte} pts</span>
             </div>
             <div style="display:flex; justify-content:center; gap:6px;">
-              <button class="btn" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('pagarte', -1)">-</button>
-              <button class="btn gold" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('pagarte', 1)">+</button>
+              <button class="btn" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('pagarte', -1)">-</button>
+              <button class="btn gold" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('pagarte', 1)">+</button>
             </div>
           </div>
 
           <div class="rubric-criteria-row">
             <div>
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:900; color:#F8FAFC;">3. Kooperasyon at Pakikiisa ng Pangkat</div>
-              <div style="font-size:12px; font-weight:700; color:#94A3B8;">Lahat ba ng miyembro ay aktibong nakiisa at sumunod sa oras?</div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:900; color:#F8FAFC;">3. Kooperasyon at Pakikiisa ng Pangkat</div>
+              <div style="font-size:13.5px; font-weight:700; color:#94A3B8;">Lahat ba ng miyembro ay aktibong nakiisa at sumunod sa oras?</div>
             </div>
             <div style="text-align:center;">
-              <span class="peso-tag" id="rubricPts-kooperasyon" style="background:#15803D; font-size:13px;">${App.studentRubricPoints.kooperasyon} pts</span>
+              <span class="peso-tag" id="rubricPts-kooperasyon" style="background:#15803D; font-size:14.5px;">${App.studentRubricPoints.kooperasyon} pts</span>
             </div>
             <div style="display:flex; justify-content:center; gap:6px;">
-              <button class="btn" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('kooperasyon', -1)">-</button>
-              <button class="btn gold" style="padding:2px 8px; font-size:13px;" onclick="App.adjustRubricPts('kooperasyon', 1)">+</button>
+              <button class="btn" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('kooperasyon', -1)">-</button>
+              <button class="btn gold" style="padding:2px 8px; font-size:14.5px;" onclick="App.adjustRubricPts('kooperasyon', 1)">+</button>
             </div>
           </div>
         </div>
 
         <!-- Total Marks Summary -->
         <div style="display:flex; justify-content:space-between; align-items:center; border-top:1.5px solid rgba(255,255,255,0.15); padding-top:8px;">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:900; color:#F8FAFC;">KABUUANG PUNTOS NA PAGKAPAGKASUNDUAN NG MAG-AARAL:</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:14.5px; font-weight:900; color:#F8FAFC;">KABUUANG PUNTOS NA PAGKAPAGKASUNDUAN NG MAG-AARAL:</span>
           <span class="peso-tag" id="rubricTotalPts" style="background:var(--market-red); font-size:15px; font-weight:900; padding:4px 14px;">20 puntos</span>
         </div>
       </div>
@@ -1129,35 +1129,35 @@ registerSlide({
         <div class="quest-card" id="qcard-0" onclick="App.renderQuizQuestion(0)" style="cursor:pointer;">
           <div class="quest-num-badge">1</div>
           <div style="font-size:20px; margin-top:2px;">🏪</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">PAMILIHAN</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">PAMILIHAN</div>
           <div class="quest-lock-pill" id="qlock-0"><span>🔒</span></div>
         </div>
 
         <div class="quest-card" id="qcard-1" onclick="App.renderQuizQuestion(1)" style="cursor:pointer;">
           <div class="quest-num-badge">2</div>
           <div style="font-size:20px; margin-top:2px;">🏢</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">MONOPOLYO</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">MONOPOLYO</div>
           <div class="quest-lock-pill" id="qlock-1"><span>🔒</span></div>
         </div>
 
         <div class="quest-card" id="qcard-2" onclick="App.renderQuizQuestion(2)" style="cursor:pointer;">
           <div class="quest-num-badge">3</div>
           <div style="font-size:20px; margin-top:2px;">⚖️</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">PRICE TAKER</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">PRICE TAKER</div>
           <div class="quest-lock-pill" id="qlock-2"><span>🔒</span></div>
         </div>
 
         <div class="quest-card" id="qcard-3" onclick="App.renderQuizQuestion(3)" style="cursor:pointer;">
           <div class="quest-num-badge">4</div>
           <div style="font-size:20px; margin-top:2px;">🏬</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">OLIGOPOLYO</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">OLIGOPOLYO</div>
           <div class="quest-lock-pill" id="qlock-3"><span>🔒</span></div>
         </div>
 
         <div class="quest-card" id="qcard-4" onclick="App.renderQuizQuestion(4)" style="cursor:pointer;">
           <div class="quest-num-badge">5</div>
           <div style="font-size:20px; margin-top:2px;">🏛️</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">MONOPSONYO</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:900; color:#0F172A; text-transform:uppercase; line-height:1.1;">MONOPSONYO</div>
           <div class="quest-lock-pill" id="qlock-4"><span>🔒</span></div>
         </div>
       </div>
@@ -1165,10 +1165,10 @@ registerSlide({
       <!-- Question Prompt Box -->
       <div class="anim-fade-up stagger-2" style="background:linear-gradient(180deg, #0B254E 0%, #051833 100%); border:2px solid #1E4976; border-radius:10px; padding:8px 14px; margin-bottom:6px; box-shadow:0 4px 12px rgba(0,0,0,0.5);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
-          <span style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:900; color:#FBBF24; text-transform:uppercase;" id="quizProgressTag">Tanong 1 ng 5</span>
-          <span style="font-size:10.5px; font-weight:800; color:#38BDF8;">Piliin ang pinakatamang sagot sa ibaba:</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:900; color:#FBBF24; text-transform:uppercase;" id="quizProgressTag">Tanong 1 ng 5</span>
+          <span style="font-size:13px; font-weight:800; color:#38BDF8;">Piliin ang pinakatamang sagot sa ibaba:</span>
         </div>
-        <h3 id="quizQuestionText" style="font-family:'Space Grotesk',sans-serif; font-size:15.5px; color:#FFFFFF; margin:0; line-height:1.35;"></h3>
+        <h3 id="quizQuestionText" style="font-family:'Space Grotesk',sans-serif; font-size:17.5px; color:#FFFFFF; margin:0; line-height:1.35;"></h3>
       </div>
 
       <!-- Choices Area -->

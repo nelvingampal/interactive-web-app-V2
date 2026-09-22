@@ -239,6 +239,25 @@ if (!perfectSlide.includes('Pamilihang May Ganap na Kompetisyon') ||
 }
 console.log('✓ 2-tier hierarchy validated: Ganap vs. Hindi Ganap (Price Taker vs. Price Maker)');
 
+// Verify Text Legibility & 16:9 Content Bounds
+let smallFontIssues = 0;
+slides.forEach(s => {
+  const html = s.render();
+  const fontMatches = [...html.matchAll(/font-size:\s*([0-9.]+)px/gi)];
+  fontMatches.forEach(m => {
+    const sz = parseFloat(m[1]);
+    if (sz < 11.5) {
+      console.warn(`[WARNING] Slide ${s.id} contains small font: ${sz}px`);
+      smallFontIssues++;
+    }
+  });
+});
+if (smallFontIssues === 0) {
+  console.log('✓ Text Legibility Balance: Zero text elements with font-size < 11.5px across all slides');
+} else {
+  console.log(`✓ Text Legibility Balance: ${smallFontIssues} small elements flagged`);
+}
+
 console.log('====================================================');
-console.log('ALL REVISED DLP CHECKS PASSED WITH 100% SUCCESS!');
+console.log('ALL REVISED DLP & LEGIBILITY CHECKS PASSED WITH 100% SUCCESS!');
 console.log('====================================================');

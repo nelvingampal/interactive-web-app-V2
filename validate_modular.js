@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const rootDir = path.resolve('c:/Users/nelvi/Downloads/interactive web app');
+const rootDir = __dirname;
 console.log('Validating modular project structure in:', rootDir);
 
 // Verify required files exist
@@ -42,7 +42,8 @@ function createMockElement(id) {
     classList: {
       add: () => {},
       remove: () => {},
-      contains: () => false
+      contains: () => false,
+      toggle: () => {}
     },
     appendChild: () => {},
     removeChild: () => {},
@@ -109,9 +110,25 @@ jsFiles.forEach(file => {
 // Verify lesson data
 const lessonData = vm.runInContext('lessonData', context);
 console.log('✓ Lesson Title:', lessonData.title);
+if (lessonData.title !== "IBA'T IBANG ESTRAKTURA NG PAMILIHAN") {
+  console.error(`ERROR: Title must be "IBA'T IBANG ESTRAKTURA NG PAMILIHAN"! Got: ${lessonData.title}`);
+  process.exit(1);
+}
+
 console.log('✓ Quiz questions count:', lessonData.quizQuestions.length);
 console.log('✓ Sorting items count:', lessonData.sortItems.length);
 console.log('✓ Analysis questions count:', lessonData.analysisQuestions.length);
+
+if (lessonData.analysisQuestions.length !== 4) {
+  console.error(`ERROR: Expected 4 analysis questions, found ${lessonData.analysisQuestions.length}`);
+  process.exit(1);
+}
+
+if (lessonData.sortCategories.length !== 2) {
+  console.error(`ERROR: Expected 2 motivation categories, found ${lessonData.sortCategories.length}`);
+  process.exit(1);
+}
+console.log('✓ Motivation 2-column table categories verified:', lessonData.sortCategories.map(c => c.label).join(' | '));
 
 // Verify quiz answer keys (1-C, 2-B, 3-C, 4-D, 5-A)
 const expectedAnswers = [2, 1, 2, 3, 0];
@@ -135,11 +152,44 @@ console.log('✓ Mascots SVG generator verified (Aling Nena & Kuya Juan)');
 
 // Verify registered slides
 const slides = vm.runInContext('slides', context);
-console.log(`✓ Registered slides count: ${slides.length} (Expected: 24)`);
-if (slides.length !== 24) {
-  console.error(`ERROR: Expected 24 slides, found ${slides.length}`);
+console.log(`✓ Registered slides count: ${slides.length} (Expected: 25)`);
+if (slides.length !== 25) {
+  console.error(`ERROR: Expected 25 slides, found ${slides.length}`);
   process.exit(1);
 }
+
+// Verify "Kahulugan ng Pamilihan" slide is dropped completely
+const oldDefSlide = slides.find(s => s.id === 'abs-def');
+if (oldDefSlide) {
+  console.error('ERROR: "abs-def" slide must be deleted completely!');
+  process.exit(1);
+}
+console.log('✓ Confirmed: "Kahulugan ng Pamilihan" topic/slide was fully removed');
+
+// Verify Opening Routine sequence: Panalangin -> Pagbati -> Attendance -> Rules -> Review
+const slideIds = slides.map(s => s.id);
+const prayerIdx = slideIds.indexOf('prayer');
+const greetingIdx = slideIds.indexOf('greeting');
+const attendanceIdx = slideIds.indexOf('attendance');
+const rulesIdx = slideIds.indexOf('rules');
+const reviewIdx = slideIds.indexOf('review');
+
+if (!(prayerIdx < greetingIdx && greetingIdx < attendanceIdx && attendanceIdx < rulesIdx && rulesIdx < reviewIdx)) {
+  console.error(`ERROR: Opening routine sequence mismatch! Order found: ${slideIds.slice(2, 7).join(' -> ')}`);
+  process.exit(1);
+}
+console.log('✓ Confirmed: Opening routine sequence is Panalangin -> Pagbati -> Pagtala ng Liban -> Alituntunin sa Silid -> Balik-Aral');
+
+// Verify 3 Differentiated Instruction slides exist
+const diff1 = slides.find(s => s.id === 'diff-pangkat1');
+const diff2 = slides.find(s => s.id === 'diff-pangkat2');
+const diff3 = slides.find(s => s.id === 'diff-pangkat3');
+
+if (!diff1 || !diff2 || !diff3) {
+  console.error('ERROR: Missing differentiated instruction slides for Pangkat 1, 2, or 3!');
+  process.exit(1);
+}
+console.log('✓ Confirmed: 3 distinct Differentiated Instruction slides present before formal content');
 
 // Verify every slide renders without exception
 slides.forEach((s, idx) => {
@@ -153,7 +203,7 @@ slides.forEach((s, idx) => {
     process.exit(1);
   }
 });
-console.log('✓ All 24 slides rendered clean HTML without errors');
+console.log('✓ All 25 slides rendered clean HTML without errors');
 
 // Verify video integration in prayer and abs-video slides
 const prayerSlide = slides.find(s => s.id === 'prayer').render();
@@ -163,6 +213,21 @@ if (!prayerSlide.includes('videos/prayer.mp4') || !absVideoSlide.includes('video
   process.exit(1);
 }
 console.log('✓ Video files verified in prayer and abs-video slides');
+
+// Verify video clip presentation wording
+if (!absVideoSlide.includes('Video Clip Presentation')) {
+  console.error('ERROR: Video clip presentation wording missing in abs-video slide!');
+  process.exit(1);
+}
+console.log('✓ Video clip presentation wording confirmed');
+
+// Verify student-created rubric
+const rubricSlide = slides.find(s => s.id === 'rubric').render();
+if (!rubricSlide.includes('Gagawa ang mga mag-aaral ng sariling pamantayan sa Pagmamarka ng Dula-dulaan')) {
+  console.error('ERROR: Student-created rubric directive missing in rubric slide!');
+  process.exit(1);
+}
+console.log('✓ Student-created rubric directive confirmed');
 
 // Verify 2-tier hierarchy
 const perfectSlide = slides.find(s => s.id === 'abs-perfect').render();
@@ -175,5 +240,5 @@ if (!perfectSlide.includes('Pamilihang May Ganap na Kompetisyon') ||
 console.log('✓ 2-tier hierarchy validated: Ganap vs. Hindi Ganap (Price Taker vs. Price Maker)');
 
 console.log('====================================================');
-console.log('ALL MODULAR CHECKS PASSED WITH 100% SUCCESS!');
+console.log('ALL REVISED DLP CHECKS PASSED WITH 100% SUCCESS!');
 console.log('====================================================');

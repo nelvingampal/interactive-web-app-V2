@@ -24,9 +24,19 @@ const App = {
   // Group Leaderboard Scores
   groupScores: { 1: 500, 2: 350, 3: 250, 4: 200 },
 
-  // Analysis Questions State
-  analysisAnswered: [false, false, false, false, false],
-  analysisPicks: [null, null, null, null, null],
+  // Analysis Questions State (4 Questions in Revised DLP)
+  analysisAnswered: [false, false, false, false],
+  analysisPicks: [null, null, null, null],
+
+  // Differentiated Instruction State (Pangkat 1, 2, 3)
+  diffP1SelectedCard: null,
+  diffP1PlacedCount: 0,
+  diffP2SelectedStmt: null,
+  diffP2PlacedCount: 0,
+  diffP3Revealed: [false, false, false],
+
+  // Student-Created Rubric Points State
+  studentRubricPoints: { nilalaman: 10, pagarte: 5, kooperasyon: 5 },
 
   // Quiz State
   quizCurrentIndex: 0,
@@ -178,16 +188,19 @@ const App = {
       subtitleEl.textContent = "★ ★ MATALINONG PAGSUSURI NG MAG-AARAL ★ ★";
     } else if (slideCfg.id === 'motivation-game') {
       titleEl.textContent = "HAMON SA PAG-UURI NG PAMILIHAN!";
-      subtitleEl.textContent = "★ ★ HILAHIN AT I-PANGKAT ANG MGA PRODUKTO ★ ★";
+      subtitleEl.textContent = "★ ★ I-PANGKAT SA DALAWANG KOLUM ★ ★";
+    } else if (slideCfg.id.startsWith('diff-')) {
+      titleEl.textContent = "DIFFERENTIATED INSTRUCTION!";
+      subtitleEl.textContent = "★ ★ PANGKATANG GAWAIN BAGO ANG TALAKAYAN ★ ★";
     } else if (slideCfg.id === 'abs-video') {
       titleEl.textContent = "BIDYO PAMPAGKATUTO!";
-      subtitleEl.textContent = "★ ★ ESTRAKTURA NG PAMILIHAN ★ ★";
-    } else if (slideCfg.id === 'abs-def' || slideCfg.id.startsWith('abs-')) {
-      titleEl.textContent = "ESTRAKTURA NG PAMILIHAN";
+      subtitleEl.textContent = "★ ★ VIDEO CLIP PRESENTATION ★ ★";
+    } else if (slideCfg.id === 'abs-perfect' || slideCfg.id === 'abs-imperfect') {
+      titleEl.textContent = "IBA'T IBANG ESTRAKTURA NG PAMILIHAN";
       subtitleEl.textContent = "★ ★ ARALIN AT MGA KATANGIAN ★ ★";
     } else if (slideCfg.id === 'application' || slideCfg.id === 'rubric') {
       titleEl.textContent = "SURIIN AT ISADULA!";
-      subtitleEl.textContent = "★ ★ PANGKATANG DULA-DULAAN ★ ★";
+      subtitleEl.textContent = "★ ★ PANGKATANG DULA-DULAAN AT RUBRIK ★ ★";
     } else {
       titleEl.textContent = slideCfg.nav.toUpperCase();
       subtitleEl.textContent = "★ ★ EKONOMIKS 9 · ARALING PANLIPUNAN ★ ★";
@@ -209,10 +222,10 @@ const App = {
 
     // Update bottom stepper (1 to 5 mapping across major phases)
     let activeStep = 1;
-    if (index >= 2 && index <= 7) activeStep = 1; // Panimula
-    else if (index >= 8 && index <= 9) activeStep = 2; // Aktibiti
-    else if (index >= 10 && index <= 14) activeStep = 3; // Pagsusuri
-    else if (index >= 15 && index <= 19) activeStep = 4; // Abstraction (Bidyo + Talakayan)
+    if (index >= 2 && index <= 7) activeStep = 1; // Panimula (Panalangin -> Layunin)
+    else if (index >= 8 && index <= 9) activeStep = 2; // Aktibiti (Gawain sa Pag-uuri)
+    else if (index >= 10 && index <= 13) activeStep = 3; // Pagsusuri (4 na Tanong)
+    else if (index >= 14 && index <= 19) activeStep = 4; // Abstraction (Differentiated + Video + Estraktura)
     else if (index >= 20) activeStep = 5; // Paglalapat & Pagtataya
 
     for (let i = 1; i <= 5; i++) {
@@ -450,7 +463,7 @@ const App = {
           <div style="margin-top:10px;">
             ${qIdx < lessonData.analysisQuestions.length - 1 
               ? `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.nextSlide()">Susunod na Tanong (Tanong ${qIdx + 2}) ➔</button>`
-              : `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.jumpToId('abs-def')">Magpatuloy sa Pagtalakay sa Aralin ➔</button>`
+              : `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.jumpToId('diff-pangkat1')">Tumuloy sa Pangkatang Gawain (Differentiated Tasks) ➔</button>`
             }
           </div>
         </div>`;
@@ -491,11 +504,188 @@ const App = {
           <div style="margin-top:10px;">
             ${qIdx < lessonData.analysisQuestions.length - 1 
               ? `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.nextSlide()">Susunod na Tanong (Tanong ${qIdx + 2}) ➔</button>`
-              : `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.jumpToId('abs-def')">Magpatuloy sa Pagtalakay sa Aralin ➔</button>`
+              : `<button class="btn-arcade-gold" style="font-size:14px; padding:8px 22px; font-weight:800;" onclick="App.jumpToId('diff-pangkat1')">Tumuloy sa Pangkatang Gawain (Differentiated Tasks) ➔</button>`
             }
           </div>
         </div>`;
     }
+  },
+
+  // ============================================================
+  // DIFFERENTIATED INSTRUCTION CONTROLLERS (PANGKAT 1, 2, 3)
+  // ============================================================
+  
+  // Pangkat 1: Picture Card Matching (4 Columns)
+  selectDiffP1Card: (cardId) => {
+    App.diffP1SelectedCard = cardId;
+    document.querySelectorAll('.p1-card-chip').forEach(c => {
+      if (c.dataset.id === cardId) c.classList.add('selected');
+      else c.classList.remove('selected');
+    });
+  },
+
+  placeDiffP1: (structId) => {
+    if (!App.diffP1SelectedCard) return;
+    const card = lessonData.diffPangkat1.cards.find(c => c.id === App.diffP1SelectedCard);
+    if (!card) return;
+
+    const chip = document.getElementById('p1chip-' + card.id);
+    if (!chip || chip.classList.contains('placed')) return;
+
+    chip.classList.add('placed');
+    chip.classList.remove('selected');
+
+    const targetZone = document.getElementById('p1items-' + structId);
+    if (targetZone) {
+      const isCorrect = card.correct === structId;
+      if (isCorrect) {
+        App.addScore(25);
+        App.playSfx('correct');
+      } else {
+        App.playSfx('wrong');
+      }
+      const itemEl = document.createElement('div');
+      itemEl.className = 'diff-placed-card ' + (isCorrect ? 'correct' : 'wrong');
+      itemEl.innerHTML = `<span>${card.label}</span> <span>${isCorrect ? '✓' : '✕ (Iwasto)'}</span>`;
+      targetZone.appendChild(itemEl);
+
+      App.diffP1PlacedCount++;
+      const total = lessonData.diffPangkat1.cards.length;
+      const countEl = document.getElementById('p1RemainingCount');
+      if (countEl) countEl.textContent = `Natitira: ${total - App.diffP1PlacedCount} / ${total}`;
+
+      if (App.diffP1PlacedCount >= total) {
+        const banner = document.getElementById('p1DoneBanner');
+        if (banner) banner.style.display = 'block';
+        App.addScore(50);
+      }
+    }
+    App.diffP1SelectedCard = null;
+  },
+
+  resetDiffP1: () => {
+    App.diffP1SelectedCard = null;
+    App.diffP1PlacedCount = 0;
+    document.querySelectorAll('.p1-card-chip').forEach(c => {
+      c.classList.remove('placed', 'selected');
+      c.style.display = 'flex';
+    });
+    ['monopolyo', 'monopsonyo', 'oligopolyo', 'monopolistic'].forEach(s => {
+      const z = document.getElementById('p1items-' + s);
+      if (z) z.innerHTML = '';
+    });
+    const countEl = document.getElementById('p1RemainingCount');
+    if (countEl) countEl.textContent = `Natitira: 5 / 5`;
+    const banner = document.getElementById('p1DoneBanner');
+    if (banner) banner.style.display = 'none';
+  },
+
+  // Pangkat 2: Characteristic Matching (4 Columns)
+  selectDiffP2Stmt: (stmtId) => {
+    App.diffP2SelectedStmt = stmtId;
+    document.querySelectorAll('.p2-stmt-chip').forEach(c => {
+      if (c.dataset.id === stmtId) c.classList.add('selected');
+      else c.classList.remove('selected');
+    });
+  },
+
+  placeDiffP2: (structId) => {
+    if (!App.diffP2SelectedStmt) return;
+    const stmt = lessonData.diffPangkat2.statements.find(s => s.id === App.diffP2SelectedStmt);
+    if (!stmt) return;
+
+    const chip = document.getElementById('p2chip-' + stmt.id);
+    if (!chip || chip.classList.contains('placed')) return;
+
+    chip.classList.add('placed');
+    chip.classList.remove('selected');
+
+    const targetZone = document.getElementById('p2items-' + structId);
+    if (targetZone) {
+      const isCorrect = stmt.correct === structId;
+      if (isCorrect) {
+        App.addScore(25);
+        App.playSfx('correct');
+      } else {
+        App.playSfx('wrong');
+      }
+      const itemEl = document.createElement('div');
+      itemEl.className = 'diff-placed-card ' + (isCorrect ? 'correct' : 'wrong');
+      itemEl.innerHTML = `<span>${stmt.text}</span> <span>${isCorrect ? '✓' : '✕ (Iwasto)'}</span>`;
+      targetZone.appendChild(itemEl);
+
+      App.diffP2PlacedCount++;
+      const total = lessonData.diffPangkat2.statements.length;
+      const countEl = document.getElementById('p2RemainingCount');
+      if (countEl) countEl.textContent = `Natitira: ${total - App.diffP2PlacedCount} / ${total}`;
+
+      if (App.diffP2PlacedCount >= total) {
+        const banner = document.getElementById('p2DoneBanner');
+        if (banner) banner.style.display = 'block';
+        App.addScore(50);
+      }
+    }
+    App.diffP2SelectedStmt = null;
+  },
+
+  resetDiffP2: () => {
+    App.diffP2SelectedStmt = null;
+    App.diffP2PlacedCount = 0;
+    document.querySelectorAll('.p2-stmt-chip').forEach(c => {
+      c.classList.remove('placed', 'selected');
+      c.style.display = 'flex';
+    });
+    ['monopolyo', 'monopsonyo', 'oligopolyo', 'monopolistic'].forEach(s => {
+      const z = document.getElementById('p2items-' + s);
+      if (z) z.innerHTML = '';
+    });
+    const countEl = document.getElementById('p2RemainingCount');
+    if (countEl) countEl.textContent = `Natitira: 4 / 4`;
+    const banner = document.getElementById('p2DoneBanner');
+    if (banner) banner.style.display = 'none';
+  },
+
+  // Pangkat 3: Manila Paper Q&A (Petron/Shell/Caltex Scenario)
+  revealDiffP3: (idx) => {
+    App.diffP3Revealed[idx] = true;
+    const ansBox = document.getElementById(`p3ans-${idx}`);
+    const btn = document.getElementById(`p3btn-${idx}`);
+    const qBox = document.getElementById(`p3qbox-${idx}`);
+    if (ansBox && btn) {
+      btn.style.display = 'none';
+      ansBox.style.display = 'block';
+      if (qBox) qBox.classList.add('active-reveal');
+      App.addScore(25);
+      App.playSfx('correct');
+    }
+  },
+
+  resetDiffP3: () => {
+    App.diffP3Revealed = [false, false, false];
+    [0, 1, 2].forEach(idx => {
+      const ansBox = document.getElementById(`p3ans-${idx}`);
+      const btn = document.getElementById(`p3btn-${idx}`);
+      const qBox = document.getElementById(`p3qbox-${idx}`);
+      if (ansBox) ansBox.style.display = 'none';
+      if (btn) btn.style.display = 'inline-block';
+      if (qBox) qBox.classList.remove('active-reveal');
+    });
+  },
+
+  // Student-Created Rubric Points Controller
+  adjustRubricPts: (key, delta) => {
+    const current = App.studentRubricPoints[key] || 5;
+    const nextVal = Math.max(1, Math.min(20, current + delta));
+    App.studentRubricPoints[key] = nextVal;
+    const ptsEl = document.getElementById('rubricPts-' + key);
+    if (ptsEl) ptsEl.textContent = nextVal + ' pts';
+    App.updateRubricTotal();
+  },
+
+  updateRubricTotal: () => {
+    const total = Object.values(App.studentRubricPoints).reduce((a, b) => a + b, 0);
+    const totEl = document.getElementById('rubricTotalPts');
+    if (totEl) totEl.textContent = `${total} puntos`;
   },
 
   // Interactive Quiz Handlers (Verbatim Question Rendering & Scoring)
@@ -660,6 +850,7 @@ const App = {
     // Tanging ang interactive games at activities lamang ang may masiglang musika
     return slideId === 'motivation-intro' || 
            slideId === 'motivation-game' || 
+           (slideId && slideId.startsWith('diff-')) ||
            slideId === 'application' || 
            slideId === 'quiz';
   },

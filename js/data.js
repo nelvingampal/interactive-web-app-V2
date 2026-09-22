@@ -1,14 +1,14 @@
 /* ============================================================
    LESSON DATA — PHILIPPINE DEPED GRADE 9 ARALING PANLIPUNAN
-   MELC: AP9MYK-IHe-11 (Kahulugan at Estraktura ng Pamilihan)
-   Verbatim Content from Official Lesson Plan
+   MELC: AP9MYK-IHe-11 (Iba't Ibang Estraktura ng Pamilihan)
+   Verbatim Content from Revised Official Lesson Plan (DLP)
    ============================================================ */
 
 const lessonData = {
-  title: "KAHULUGAN AT ESTRAKTURA NG PAMILIHAN",
+  title: "IBA'T IBANG ESTRAKTURA NG PAMILIHAN",
   gradeLevel: "Ekonomiks 9 · Ikalawang Markahan",
   melcCode: "MELC AP9MYK-IHe-11",
-  competency: "Nasusuri ang kahulugan at iba't ibang estraktura ng pamilihan.",
+  competency: "Nasusuri ang iba't ibang estraktura ng pamilihan.",
   
   kagamitan: "PowerPoint / Interactive Presentation, mga larawan/logo ng produkto at kumpanya, manila paper, marker, at meta-cards.",
   sanggunian: "Ekonomiks 9 (Modyul ng Mag-aaral sa Araling Panlipunan), K-12 Most Essential Learning Competencies (MELCs) AP9.",
@@ -44,83 +44,129 @@ const lessonData = {
     answer: "Nagkakasundo ang mamimili (demand) at nagtitinda (supply) sa pinagkasunduang <b>Presyong Ekwilibriyo (₱)</b> at <b>Dami ng Produkto</b> sa pamilihan. Kapag nagbago ang presyo o dami, nagkakaroon ng kakulangan (shortage) o kalabisan (surplus)."
   },
 
-  sortItems: [
-    { id: "s1", label: "🌾 Bigas", correct: "maraming", price: "₱52/kilo", hint: "Maraming nagtitinda ng magkakatulad na butil" },
-    { id: "s2", label: "🥬 Gulay sa palengke", correct: "maraming", price: "₱25/tali", hint: "Maraming magsasaka at tindera sa talipapa" },
-    { id: "s3", label: "⚡ Meralco", correct: "iisa", price: "₱ Bill", hint: "Nag-iisang tagapamahagi ng kuryente" },
-    { id: "s4", label: "🚰 Maynilad", correct: "iisa", price: "₱ Bill", hint: "Nag-iisang tagapaghatid ng tubig sa kanlurang Maynila" },
-    { id: "s5", label: "⛽ Petron", correct: "kakaunti", price: "₱62/L", hint: "Isa sa Big 3 kumpanya ng langis sa bansa" },
-    { id: "s6", label: "⛽ Shell", correct: "kakaunti", price: "₱63/L", hint: "Isa sa iilang higanteng kumpanya ng gasolina" },
-    { id: "s7", label: "📶 Globe", correct: "kakaunti", price: "₱ Load", hint: "Iilan lamang silang telecommunication provider" },
-    { id: "s8", label: "📶 Smart", correct: "kakaunti", price: "₱ Load", hint: "Katuwang na higanteng telecom provider" },
-    { id: "s9", label: "🍔 Jollibee", correct: "differentiated", price: "₱89 Meal", hint: "Kilalang fast food burger na may sariling lasa at patalastas" },
-    { id: "s10", label: "🍔 McDonald's", correct: "differentiated", price: "₱95 Meal", hint: "May katunggali sa fast food ngunit may sariling tatak" },
-    { id: "s11", label: "🧼 Tide", correct: "differentiated", price: "₱14 Sachet", hint: "Sabon panlaba na kilala sa mabangong formula at ads" },
-    { id: "s12", label: "🧼 Surf", correct: "differentiated", price: "₱12 Sachet", hint: "Sabon panlaba na may matinding patalastas at ibang bango" },
-    { id: "s13", label: "👮 Pulis / Sundalo", correct: "iisang mamimili", price: "₱ Sahod", hint: "Pamahalaan lamang ang iisang bumibili ng kanilang serbisyo" }
-  ],
-
+  // Motivation Activity: 2-Column Table Format
   sortCategories: [
-    { id: "maraming", label: "Maraming nagtitinda (Walang kontrol sa presyo)" },
-    { id: "iisa", label: "Iisang nagtitinda (May hadlang sa pagpasok)" },
-    { id: "kakaunti", label: "Kakaunti (Magkakaugnay ang presyo)" },
-    { id: "differentiated", label: "Differentiated (May patalastas at tatak)" },
-    { id: "iisang mamimili", label: "Iisa lang ang mamimili (Gobyerno)" }
+    { id: "dami", label: "DAMI NG NAGTITINDA" },
+    { id: "katunggali", label: "KATUNGGALI O KAAGAW SA NEGOSYO" }
   ],
 
+  sortItems: [
+    { id: "s1", label: "🌾 Bigas", correct: "dami", price: "₱52/kilo", hint: "Maraming nagtitinda ng magkakatulad na butil sa palengke" },
+    { id: "s2", label: "🥬 Gulay sa palengke", correct: "dami", price: "₱25/tali", hint: "Maraming magsasaka at tindera sa bawat talipapa" },
+    { id: "s3", label: "⚡ Meralco", correct: "katunggali", price: "₱ Bill", hint: "Walang katunggali; nag-iisang tagapamahagi ng kuryente" },
+    { id: "s4", label: "🚰 Maynilad", correct: "katunggali", price: "₱ Bill", hint: "Walang kaagaw sa nasasakupang distribusyon ng tubig" },
+    { id: "s5", label: "⛽ Petron", correct: "katunggali", price: "₱62/L", hint: "May iilang higanteng katunggali (Big 3 ng langis)" },
+    { id: "s6", label: "⛽ Shell", correct: "katunggali", price: "₱63/L", hint: "Katuwang na katunggali sa industriya ng petrolyo" },
+    { id: "s7", label: "📶 Globe", correct: "katunggali", price: "₱ Load", hint: "May mahigpit na katunggali sa telekomunikasyon" },
+    { id: "s8", label: "📶 Smart", correct: "katunggali", price: "₱ Load", hint: "Kaagaw sa mga serbisyong cellular at data" },
+    { id: "s9", label: "🍔 Jollibee", correct: "katunggali", price: "₱89 Meal", hint: "May katunggali sa fast food na may tatak at patalastas" },
+    { id: "s10", label: "🍔 McDonald's", correct: "katunggali", price: "₱95 Meal", hint: "Pangunahing katunggali sa burgers at manok" },
+    { id: "s11", label: "🧼 Tide", correct: "katunggali", price: "₱14 Sachet", hint: "May katunggaling sabon panlaba sa pamilihan" },
+    { id: "s12", label: "🧼 Surf", correct: "katunggali", price: "₱12 Sachet", hint: "Kaagaw sa bentahan ng sabon na may ibang bango" },
+    { id: "s13", label: "👮 Pulis / Sundalo", correct: "dami", price: "₱ Sahod", hint: "Maraming nag-aalok ng serbisyo at lakas-paggawa sa iisang mamimili" }
+  ],
+
+  // Analysis Questions: Revised to exactly 4 questions with explicit "Bakit?" reasoning
   analysisQuestions: [
     {
       q: "1. Ano ang naging batayan ng inyong pangkat sa pagpapangkat ng mga larawan?",
       choices: [
         "A) Batay sa kulay ng logo at dalas ng patalastas sa telebisyon.",
-        "B) Batay sa dami ng nagtitinda at kung mayroon silang katunggali sa negosyo.",
+        "B) Batay sa dami ng nagtitinda at kung mayroon silang katunggali o kaagaw sa negosyo.",
         "C) Batay sa kung aling produkto ang pinakamurang bilhin ngayong linggo."
       ],
       bestIndex: 1,
-      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ito ang dalawang pangunahing pamantayan sa pagsusuri ng estraktura ng pamilihan — ang bilang ng prodyuser at antas ng kumpetisyon sa merkado."
+      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ito ang dalawang pangunahing pamantayan sa pagsusuri ng estraktura ng pamilihan — ang dami ng prodyuser at ang antas ng katunggali sa merkado."
     },
     {
-      q: "2. Batay sa mga larawan, ano ang karaniwang ginagawa o nagaganap sa mga lugar o negosyong ito?",
+      q: "2. Aling mga produkto o kumpanya ang napansin ninyong walang gaanong kapareho o kalaban sa merkado? Bakit?",
       choices: [
-        "A) Nagaganap ang interaksyon ng mamimili at nagtitinda upang magkasundo sa presyo (₱) at dami.",
-        "B) Nagpapaligsahan lamang ang mga kumpanya kung sino ang may pinakamalaking gusali.",
-        "C) Pamamahagi lamang ng libreng tulong at ayuda nang walang bentahan."
-      ],
-      bestIndex: 0,
-      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ito ang mismong kahulugan ng pamilihan — isang mekanismo kung saan nagkakasundo ang mamimili at prodyuser sa presyo at dami ng produkto."
-    },
-    {
-      q: "3. Aling mga produkto o kumpanya ang napansin ninyong walang gaanong kapareho o kalaban sa merkado?",
-      choices: [
-        "A) Bigas at gulay sa palengke dahil magkakapareho ang paninda sa bawat pwesto.",
-        "B) Fast food tulad ng Jollibee at McDonald's dahil pareho silang nagtitinda ng burger.",
-        "C) Meralco (kuryente) at Maynilad (tubig) dahil sila ang nag-iisang tagapagkaloob sa kanilang nasasakupan."
-      ],
-      bestIndex: 2,
-      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ang Meralco at Maynilad ay halimbawa ng Monopolyo — iisa lamang ang prodyuser kaya walang direktang kapalit at walang kalaban ang kanilang serbisyo."
-    },
-    {
-      q: "4. Alin naman ang may napakaraming katunggali o pagpipilian ang mga mamimili?",
-      choices: [
-        "A) Gulay at bigas sa palengke, gayundin ang fast food (Jollibee, McDo) at sabon (Tide, Surf).",
-        "B) Kumpanya ng kuryente at tubig dahil maraming kawad na nakakabit sa mga poste.",
-        "C) Serbisyong militar ng mga sundalo at pulis na gobyerno lamang ang kumukuha."
-      ],
-      bestIndex: 0,
-      insight: "Pinakamalapit sa tamang pagsusuri ✓: Sa Ganap na Kompetisyon at Monopolistic Competition, napakaraming nagtitinda kaya malawak ang pagpipilian at may kalayaan ang mamimili."
-    },
-    {
-      q: "5. Paano nakatutulong ang mga negosyo at pamilihang ito sa ating pang-araw-araw na pamumuhay?",
-      choices: [
-        "A) Pinipilit lamang nila ang mamamayan na gumastos kahit hindi naman kailangan.",
-        "B) Sinisiguro nito ang maayos na suplay ng pangunahing pangangailangan (pagkain, kuryente, tubig) sa tamang presyo (₱).",
-        "C) Nagbibigay lamang sila ng trabaho ngunit walang silbi sa pangkalahatang ekonomiya."
+        "A) Bigas at gulay sa palengke — Dahil magkakaiba ang presyo nila araw-araw.",
+        "B) Meralco at Maynilad — Dahil sila ang nag-iisang binigyan ng karapatan at prangkisa na maghatid ng kuryente at tubig, kaya walang ibang kumpanyang maaaring magtinda nito sa kanilang nasasakupan.",
+        "C) Jollibee at McDonald's — Dahil sila ang pinakapaborito ng mga kabataan."
       ],
       bestIndex: 1,
-      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ang pamilihan ang puso ng ekonomiya — sinisiguro nitong maipamahagi ang mga yaman upang matugunan ang walang katapusang pangangailangan ng tao."
+      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ang Meralco at Maynilad ay walang kalaban dahil sa mga 'barrier to entry' at legal na prangkisa ng gobyerno — katangian ng isang Monopolyo kung saan iisa lamang ang nagtitinda."
+    },
+    {
+      q: "3. Alin naman ang may napakaraming katunggali o pagpipilian ang mga mamimili? Bakit?",
+      choices: [
+        "A) Gulay at bigas sa palengke, gayundin ang fast food (Jollibee/McDo) at sabon (Tide/Surf) — Dahil napakaraming nagtitinda at malayang nakapapasok ang negosyante, kaya may kalayaan ang mamimili na pumili batay sa presyo, tatak, o kalidad.",
+        "B) Kumpanya ng kuryente at tubig — Dahil maraming poste ng kuryente at tubo ng tubig sa buong lungsod.",
+        "C) Serbisyong militar ng mga sundalo at pulis — Dahil maraming tanggapan ang pamahalaan."
+      ],
+      bestIndex: 0,
+      insight: "Pinakamalapit sa tamang pagsusuri ✓: Sa Ganap na Kompetisyon at Monopolistic Competition, maraming prodyuser kaya matindi ang kumpetisyon at malawak ang pagpipilian ng mamimili."
+    },
+    {
+      q: "4. Paano nakatutulong ang mga negosyo at pamilihang ito sa ating pang-araw-araw na pamumuhay?",
+      choices: [
+        "A) Pinipilit lamang nila ang mamamayan na gumastos kahit hindi naman kailangan.",
+        "B) Sinisiguro nito ang maayos na suplay ng ating pangunahing pangangailangan (pagkain, kuryente, tubig, komunikasyon) at nagbibigay ng trabaho at kabuhayan.",
+        "C) Nagbibigay lamang sila ng libangan ngunit walang epekto sa pangkalahatang ekonomiya."
+      ],
+      bestIndex: 1,
+      insight: "Pinakamalapit sa tamang pagsusuri ✓: Ang pamilihan ang nagtitiyak na ang mga yaman at produkto ng lipunan ay makakarating sa mga mamamayan upang matugunan ang kanilang pang-araw-araw na pangangailangan."
     }
   ],
 
+  // Differentiated Instruction (Pangkatang Gawain bago ang Pormal na Talakayan)
+  diffStructures: [
+    { id: "monopolyo", label: "Monopolyo", icon: "⚡" },
+    { id: "monopsonyo", label: "Monopsonyo", icon: "👮" },
+    { id: "oligopolyo", label: "Oligopolyo", icon: "⛽" },
+    { id: "monopolistic", label: "Monopolistic", icon: "🍔" }
+  ],
+
+  // Pangkat 1: Picture Card Matching
+  diffPangkat1: {
+    title: "Pangkat 1: Pag-uugnay ng mga Larawan sa Estraktura",
+    taskDesc: "Ipares ang bawat larawan o logo sa tamang estraktura ng pamilihan (Partikular sa estrukturang 'iisa lang ang nagtitinda' at iba pa):",
+    cards: [
+      { id: "p1_meralco", label: "⚡ Meralco Logo", correct: "monopolyo", desc: "Nag-iisang tagapamahagi ng kuryente sa NCR" },
+      { id: "p1_maynilad", label: "🚰 Maynilad", correct: "monopolyo", desc: "Nag-iisang tagapagkaloob ng tubig sa Kanlurang Maynila" },
+      { id: "p1_jollibee", label: "🍔 Jollibee", correct: "monopolistic", desc: "Fast food na may sariling tatak at maraming katunggali" },
+      { id: "p1_petron", label: "⛽ Petron", correct: "oligopolyo", desc: "Kabilang sa iilang higanteng kumpanya ng petrolyo" },
+      { id: "p1_pnp", label: "👮 PNP Logo", correct: "monopsonyo", desc: "Serbisyo ng pulisya na tanging gobyerno ang bumibili" }
+    ]
+  },
+
+  // Pangkat 2: Characteristic Matching
+  diffPangkat2: {
+    title: "Pangkat 2: Pag-uuri ng mga Katangian ng Pamilihan",
+    taskDesc: "Suriin ang 4 na katangian at ilagay sa angkop na kolum ng estraktura ng pamilihan:",
+    statements: [
+      { id: "p2_s1", text: "Iisa lamang ang tagaprodyus o nagtitinda", correct: "monopolyo", hint: "Walang direktang kapalit ang produkto" },
+      { id: "p2_s2", text: "Iisa lamang ang mamimili (buyer) ngunit maraming tagaprodyus", correct: "monopsonyo", hint: "Pamahalaan ang tanging bumibili" },
+      { id: "p2_s3", text: "Kakaunti lamang ang nagtitinda ng magkakatulad o magkakaugnay na produkto", correct: "oligopolyo", hint: "May sabwatan o cartel sa presyo" },
+      { id: "p2_s4", text: "Maraming nagtitinda at mamimili ngunit ang mga produkto ay may kaunting pagkakaiba", correct: "monopolistic", hint: "Differentiated products at may patalastas" }
+    ]
+  },
+
+  // Pangkat 3: Q&A using Manila Paper (Petron/Shell/Caltex Scenario)
+  diffPangkat3: {
+    title: "Pangkat 3: Sitwasyon ng Petron, Shell, at Caltex",
+    taskDesc: "Pagsusuri sa Sitwasyon gamit ang Manila Paper Format (2 Kolum: Mga Tanong at Mga Sagot):",
+    qaList: [
+      {
+        q: "1. Bakit pare-pareho ang taas ng presyo ng Petron, Shell at Caltex?",
+        a: "Dahil kakaunti lamang silang nagtitinda sa merkado (Oligopolyo), magkakaugnay ang kanilang presyo. Kapag nagtaas ang isa dulot ng pandaigdigang presyo ng krudo, sumusunod din ang iba upang maiwasan ang matinding pagkalugi o price war.",
+        keyConcept: "Magkakaugnay na Presyo (Interdependence / Price Leadership)"
+      },
+      {
+        q: "2. Anong uri ito ng pamilihan nabibilang?",
+        a: "Nabibilang ito sa <b>Oligopolyo (Oligopoly)</b> — isang estraktura ng hindi ganap na kompetisyon kung saan iilan lamang ang higanteng prodyuser na nagtitinda ng magkakatulad o magkakaugnay na produkto.",
+        keyConcept: "Estraktura: OLIGOPOLYO"
+      },
+      {
+        q: "3. Paano nakakaapekto sa atin bilang mamimili?",
+        a: "Direkta itong nakakaapekto sa ating gastusin: tumataas ang pamasahe, presyo ng bilihin, at kuryente. Dahil iilan lang ang mapagpipilian, limitado ang kalayaan ng mamimili na makahanap ng higit na murang gasolina.",
+        keyConcept: "Epekto sa Mamimili: Pagtaas ng Pangkalahatang Bilihin"
+      }
+    ]
+  },
+
+  // Role Play Groups (Unchanged Scenarios)
   rolePlayGroups: [
     {
       label: "Pangkat 1",
@@ -148,13 +194,21 @@ const lessonData = {
     }
   ],
 
-  rubric: [
-    { criteria: "Nilalaman at Pagkakaunawa sa Paksa", pts: "10 puntos", desc: "Naipakita nang malinaw at wasto ang katangian ng nabunot na estraktura ng pamilihan." },
-    { criteria: "Pagiging Malikhain at Pag-arte", pts: "5 puntos", desc: "Makatotohanan, buhay, at nakapupukaw ng interes ang pagsasatao sa sitwasyon." },
-    { criteria: "Kooperasyon ng Pangkat", pts: "5 puntos", desc: "Lahat ng miyembro ay aktibong nakiisa at nagtulungan sa loob ng takdang oras." },
-    { criteria: "KABUUANG MARKA", pts: "20 puntos", desc: "Pinakamataas na posibleng marka sa pangkatang dula-dulaan." }
-  ],
+  // Student-Created Rubric Guidance & Criteria Options
+  rubricGuide: {
+    instruction: "Gagawa ang mga mag-aaral ng sariling pamantayan sa Pagmamarka ng Dula-dulaan (Rubrik)",
+    guideQuestions: [
+      "Ano ang dapat bigyang-diin sa inyong pagmamarka sa dula-dulaan?",
+      "Ilang puntos ang ilalaan sa bawat pamantayan upang maging patas ang hatol?"
+    ],
+    suggestedCriteria: [
+      { id: "nilalaman", label: "Nilalaman at Kawastuhan ng Estraktura", defaultPts: 10, prompt: "Naipakita ba nang wasto ang mga katangian ng estraktura?" },
+      { id: "pag-arte", label: "Kagalingan sa Pag-arte at Pagiging Makatotohanan", defaultPts: 5, prompt: "Buhay ba at nakakaengganyo ang pagsasatao sa eksena?" },
+      { id: "kooperasyon", label: "Kooperasyon at Pakikiisa ng Bawat Miyembro", defaultPts: 5, prompt: "Lahat ba ng miyembro ay may gampanin at nagtulungan?" }
+    ]
+  },
 
+  // 5-Item Scored Evaluation Quiz (Fully Unchanged, Answer key C-B-C-D-A)
   quizQuestions: [
     {
       q: "1. Ano ang tumutukoy sa isang mekanismo kung saan ang mamimili at nagtitinda ay nagkakaroon ng interaksyon upang magkasundo sa presyo at dami ng produkto?",
@@ -198,3 +252,4 @@ const lessonData = {
     format: "Isulat sa kuwaderno ang sagot sa 5 hanggang 8 pangungusap."
   }
 };
+
